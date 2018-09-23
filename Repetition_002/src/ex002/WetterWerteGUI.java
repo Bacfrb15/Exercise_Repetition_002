@@ -27,21 +27,137 @@ public class WetterWerteGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSlider1 = new javax.swing.JSlider();
+        jLabel2 = new javax.swing.JLabel();
+        jSlider2 = new javax.swing.JSlider();
+        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout(1, 2));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Eingabe"));
+        jPanel2.setLayout(new java.awt.GridLayout(6, 0));
+
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1);
+
+        jSlider1.setMajorTickSpacing(10);
+        jSlider1.setMaximum(40);
+        jSlider1.setMinimum(-20);
+        jSlider1.setMinorTickSpacing(5);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                onTempChange(evt);
+            }
+        });
+        jPanel2.add(jSlider1);
+
+        jLabel2.setText("jLabel2");
+        jPanel2.add(jLabel2);
+
+        jSlider2.setMajorTickSpacing(20);
+        jSlider2.setMinorTickSpacing(10);
+        jSlider2.setPaintLabels(true);
+        jSlider2.setPaintTicks(true);
+        jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                onLuftChange(evt);
+            }
+        });
+        jPanel2.add(jSlider2);
+
+        jButton1.setText("Einfügen");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onEinfuegen(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+
+        getContentPane().add(jPanel2);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Anzeige"));
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jPanel1.add(jScrollPane1);
+
+        getContentPane().add(jPanel1);
+
+        jMenu1.setText("Datei");
+
+        jMenuItem1.setText("Datei-speichern");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onSpeichern(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Datei-laden");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onLaden(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Datei-beenden");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onExit(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void onExit(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onExit
+        System.exit(0);
+    }//GEN-LAST:event_onExit
+
+    private void onLaden(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onLaden
+        
+    }//GEN-LAST:event_onLaden
+
+    private void onSpeichern(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onSpeichern
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onSpeichern
+
+    private void onEinfuegen(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onEinfuegen
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onEinfuegen
+
+    private void onLuftChange(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onLuftChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onLuftChange
+
+    private void onTempChange(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onTempChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_onTempChange
 
     /**
      * @param args the command line arguments
@@ -79,5 +195,19 @@ public class WetterWerteGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JSlider jSlider2;
     // End of variables declaration//GEN-END:variables
 }
